@@ -1,0 +1,45 @@
+{
+  "name": "ns4mcp",
+  "version": "0.1.0",
+  "description": "MCP server exposing a USB-attached NORD Stage 4 as natural-language-controllable MCP tools",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "ns4mcp": "dist/index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json && mkdir -p dist/schema && cp src/schema/parameters.json dist/schema/parameters.json",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "doctor": "tsx scripts/doctor.ts",
+    "midi-test": "tsx scripts/midi-test.ts",
+    "audition-synth": "tsx scripts/audition-synth.ts",
+    "audition-debug": "tsx scripts/audition-debug.ts",
+    "nrpn-test": "tsx scripts/nrpn-test.ts",
+    "nrpn-diagnose": "tsx scripts/nrpn-diagnose.ts",
+    "nrpn-fx-test": "tsx scripts/nrpn-fx-test.ts",
+    "reverb-test": "tsx scripts/reverb-test.ts",
+    "browse-sounds": "tsx scripts/browse-sounds.ts",
+    "melody-test": "tsx scripts/melody-test.ts",
+    "verify-options": "tsx scripts/verify-options.ts",
+    "wind": "tsx scripts/wind.ts",
+    "listen": "tsx scripts/listen.ts",
+    "smoke": "npm run build && tsx scripts/smoke.ts",
+    "fetch-schema": "tsx scripts/fetch-schema.ts",
+    "lint": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@julusian/midi": "^3.1.2",
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}

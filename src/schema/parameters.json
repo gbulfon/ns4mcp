@@ -1,0 +1,2187 @@
+{
+  "device": "Nord Stage 4",
+  "source": {
+    "url": "https://midi.guide/d/nord/stage-4/csv/",
+    "humanReadable": "https://midi.guide/d/nord/stage-4/",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Parameter data from midi.guide (https://midi.guide/d/nord/stage-4/), licensed CC BY-SA 4.0.",
+    "authoritativeReference": "Nord Stage 4 User Manual v1.2X Edition K (English) — https://www.nordkeyboards.com/downloads/downloads-nord-stage-4",
+    "validation": "CC/NRPN values cross-checked against the official manual (v1.2x Edition K, Appendix II MIDI Controller List) on 2026-06-02 — no value conflicts. Manual clarifies standard NRPN transmission: value in CC#38 (Data Entry LSB), CC#6 (Data Entry MSB)=0; the 14-bit \"Sample category and sample\" (3:4) is the documented exception with category in CC#6 and sample in CC#38. Filter Frequency=CC59 and CC layer/level values hardware-confirmed audibly.",
+    "fetchedAt": "2026-06-03T22:31:53.954Z",
+    "rowCount": 148
+  },
+  "parameters": [
+    {
+      "id": "amp-eq.bass",
+      "name": "Bass",
+      "section": "Amp/EQ",
+      "addressing": "cc",
+      "cc": 102,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "amp-eq.drive",
+      "name": "Drive",
+      "section": "Amp/EQ",
+      "addressing": "cc",
+      "cc": 101,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar",
+      "hint": "amp/EQ overdrive amount"
+    },
+    {
+      "id": "amp-eq.enable",
+      "name": "Enable",
+      "section": "Amp/EQ",
+      "addressing": "nrpn",
+      "nrpnMsb": 2,
+      "nrpnLsb": 80,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "amp-eq.mid",
+      "name": "Mid",
+      "section": "Amp/EQ",
+      "addressing": "cc",
+      "cc": 103,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "amp-eq.mid-frequency",
+      "name": "Mid frequency",
+      "section": "Amp/EQ",
+      "addressing": "cc",
+      "cc": 107,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "amp-eq.treble",
+      "name": "Treble",
+      "section": "Amp/EQ",
+      "addressing": "cc",
+      "cc": 104,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "amp-eq.type",
+      "name": "Type",
+      "section": "Amp/EQ",
+      "addressing": "nrpn",
+      "nrpnMsb": 2,
+      "nrpnLsb": 81,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "compressor.amount",
+      "name": "Amount",
+      "section": "Compressor",
+      "addressing": "cc",
+      "cc": 117,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar",
+      "hint": "compression amount"
+    },
+    {
+      "id": "compressor.enable",
+      "name": "Enable",
+      "section": "Compressor",
+      "addressing": "nrpn",
+      "nrpnMsb": 2,
+      "nrpnLsb": 96,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "compressor.fast",
+      "name": "Fast",
+      "section": "Compressor",
+      "addressing": "nrpn",
+      "nrpnMsb": 2,
+      "nrpnLsb": 97,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "compressor.global",
+      "name": "Global",
+      "section": "Compressor",
+      "addressing": "cc",
+      "cc": 28,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "delay.analog",
+      "name": "Analog",
+      "section": "Delay",
+      "addressing": "nrpn",
+      "nrpnMsb": 2,
+      "nrpnLsb": 89,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "delay.dry-wet",
+      "name": "Dry/wet",
+      "section": "Delay",
+      "addressing": "cc",
+      "cc": 93,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "delay.enable",
+      "name": "Enable",
+      "section": "Delay",
+      "addressing": "nrpn",
+      "nrpnMsb": 2,
+      "nrpnLsb": 88,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "delay.feedback",
+      "name": "Feedback",
+      "section": "Delay",
+      "addressing": "cc",
+      "cc": 95,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar",
+      "hint": "delay feedback — number of repeats"
+    },
+    {
+      "id": "delay.filter-type",
+      "name": "Filter type",
+      "section": "Delay",
+      "addressing": "nrpn",
+      "nrpnMsb": 2,
+      "nrpnLsb": 92,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "delay.global",
+      "name": "Global",
+      "section": "Delay",
+      "addressing": "cc",
+      "cc": 29,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "delay.ping-pong",
+      "name": "Ping-pong",
+      "section": "Delay",
+      "addressing": "nrpn",
+      "nrpnMsb": 2,
+      "nrpnLsb": 91,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "delay.tempo",
+      "name": "Tempo",
+      "section": "Delay",
+      "addressing": "cc",
+      "cc": 94,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "global.bank-select-lsb",
+      "name": "Bank select LSB",
+      "section": "Global",
+      "addressing": "cc",
+      "cc": 32,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "global.bank-select-msb",
+      "name": "Bank select MSB",
+      "section": "Global",
+      "addressing": "cc",
+      "cc": 0,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "global.control-pedal",
+      "name": "Control pedal",
+      "section": "Global",
+      "addressing": "cc",
+      "cc": 11,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "global.layer-scene",
+      "name": "Layer scene",
+      "section": "Global",
+      "addressing": "cc",
+      "cc": 8,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "global.section-edit",
+      "name": "Section edit",
+      "section": "Global",
+      "addressing": "cc",
+      "cc": 118,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "global.section-effects-focus",
+      "name": "Section effects focus",
+      "section": "Global",
+      "addressing": "cc",
+      "cc": 31,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "global.soft-pedal",
+      "name": "Soft pedal",
+      "section": "Global",
+      "addressing": "cc",
+      "cc": 67,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "global.sostenuto-pedal",
+      "name": "Sostenuto pedal",
+      "section": "Global",
+      "addressing": "cc",
+      "cc": 66,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "global.sustain-pedal",
+      "name": "Sustain pedal",
+      "section": "Global",
+      "addressing": "cc",
+      "cc": 64,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "global.volume",
+      "name": "Volume",
+      "section": "Global",
+      "addressing": "cc",
+      "cc": 7,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar",
+      "hint": "master output level"
+    },
+    {
+      "id": "mod-1.amount",
+      "name": "Amount",
+      "section": "Mod 1",
+      "addressing": "cc",
+      "cc": 85,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "mod-1.enable",
+      "name": "Enable",
+      "section": "Mod 1",
+      "addressing": "nrpn",
+      "nrpnMsb": 2,
+      "nrpnLsb": 64,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "mod-1.pump-pedal",
+      "name": "Pump pedal",
+      "section": "Mod 1",
+      "addressing": "cc",
+      "cc": 87,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "mod-1.rate",
+      "name": "Rate",
+      "section": "Mod 1",
+      "addressing": "cc",
+      "cc": 86,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "mod-1.type",
+      "name": "Type",
+      "section": "Mod 1",
+      "addressing": "nrpn",
+      "nrpnMsb": 2,
+      "nrpnLsb": 65,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "mod-2.amount",
+      "name": "Amount",
+      "section": "Mod 2",
+      "addressing": "cc",
+      "cc": 89,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "mod-2.enable",
+      "name": "Enable",
+      "section": "Mod 2",
+      "addressing": "nrpn",
+      "nrpnMsb": 2,
+      "nrpnLsb": 72,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "mod-2.rate",
+      "name": "Rate",
+      "section": "Mod 2",
+      "addressing": "cc",
+      "cc": 90,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "mod-2.type",
+      "name": "Type",
+      "section": "Mod 2",
+      "addressing": "nrpn",
+      "nrpnMsb": 2,
+      "nrpnLsb": 73,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "organ.a-level",
+      "name": "A level",
+      "section": "Organ",
+      "addressing": "cc",
+      "cc": 13,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "organ.b-level",
+      "name": "B level",
+      "section": "Organ",
+      "addressing": "cc",
+      "cc": 14,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "organ.drawbar-1",
+      "name": "Drawbar 1",
+      "section": "Organ",
+      "addressing": "cc",
+      "cc": 16,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "organ.drawbar-2",
+      "name": "Drawbar 2",
+      "section": "Organ",
+      "addressing": "cc",
+      "cc": 17,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "organ.drawbar-3",
+      "name": "Drawbar 3",
+      "section": "Organ",
+      "addressing": "cc",
+      "cc": 18,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "organ.drawbar-4",
+      "name": "Drawbar 4",
+      "section": "Organ",
+      "addressing": "cc",
+      "cc": 19,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "organ.drawbar-5",
+      "name": "Drawbar 5",
+      "section": "Organ",
+      "addressing": "cc",
+      "cc": 20,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "organ.drawbar-6",
+      "name": "Drawbar 6",
+      "section": "Organ",
+      "addressing": "cc",
+      "cc": 21,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "organ.drawbar-7",
+      "name": "Drawbar 7",
+      "section": "Organ",
+      "addressing": "cc",
+      "cc": 22,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "organ.drawbar-8",
+      "name": "Drawbar 8",
+      "section": "Organ",
+      "addressing": "cc",
+      "cc": 23,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "organ.drawbar-9",
+      "name": "Drawbar 9",
+      "section": "Organ",
+      "addressing": "cc",
+      "cc": 24,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "organ.layers-enable-scene-i",
+      "name": "Layers enable scene I",
+      "section": "Organ",
+      "addressing": "cc",
+      "cc": 80,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "organ.layers-enable-scene-ii",
+      "name": "Layers enable scene II",
+      "section": "Organ",
+      "addressing": "cc",
+      "cc": 81,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "organ.layers-focus-scene-i",
+      "name": "Layers focus scene I",
+      "section": "Organ",
+      "addressing": "cc",
+      "cc": 82,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "organ.layers-focus-scene-ii",
+      "name": "Layers focus scene II",
+      "section": "Organ",
+      "addressing": "cc",
+      "cc": 83,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "organ.model",
+      "name": "Model",
+      "section": "Organ",
+      "addressing": "nrpn",
+      "nrpnMsb": 2,
+      "nrpnLsb": 16,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar",
+      "options": [
+        {
+          "value": 11,
+          "label": "B3"
+        },
+        {
+          "value": 32,
+          "label": "Vox"
+        },
+        {
+          "value": 53,
+          "label": "Farfisa"
+        },
+        {
+          "value": 75,
+          "label": "Pipe 1"
+        },
+        {
+          "value": 96,
+          "label": "Pipe 2"
+        },
+        {
+          "value": 117,
+          "label": "B3 Bass"
+        }
+      ],
+      "hint": "organ engine/model selection"
+    },
+    {
+      "id": "organ.octave-shift",
+      "name": "Octave shift",
+      "section": "Organ",
+      "addressing": "cc",
+      "cc": 12,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "organ.percussion-enable",
+      "name": "Percussion enable",
+      "section": "Organ",
+      "addressing": "nrpn",
+      "nrpnMsb": 2,
+      "nrpnLsb": 18,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar",
+      "hint": "tonewheel percussion on/off"
+    },
+    {
+      "id": "organ.percussion-harmonic",
+      "name": "Percussion harmonic",
+      "section": "Organ",
+      "addressing": "nrpn",
+      "nrpnMsb": 2,
+      "nrpnLsb": 21,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar",
+      "options": [
+        {
+          "value": 32,
+          "label": "2nd"
+        },
+        {
+          "value": 96,
+          "label": "3rd"
+        }
+      ],
+      "hint": "percussion harmonic (2nd vs 3rd)"
+    },
+    {
+      "id": "organ.percussion-level",
+      "name": "Percussion level",
+      "section": "Organ",
+      "addressing": "nrpn",
+      "nrpnMsb": 2,
+      "nrpnLsb": 23,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "organ.percussion-speed",
+      "name": "Percussion speed",
+      "section": "Organ",
+      "addressing": "nrpn",
+      "nrpnMsb": 2,
+      "nrpnLsb": 22,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "organ.section-enable-scene-i",
+      "name": "Section enable scene I",
+      "section": "Organ",
+      "addressing": "cc",
+      "cc": 9,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "organ.section-enable-scene-ii",
+      "name": "Section enable scene II",
+      "section": "Organ",
+      "addressing": "cc",
+      "cc": 2,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "organ.vibrato-enable",
+      "name": "Vibrato enable",
+      "section": "Organ",
+      "addressing": "nrpn",
+      "nrpnMsb": 2,
+      "nrpnLsb": 20,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar",
+      "hint": "organ vibrato/chorus on/off"
+    },
+    {
+      "id": "organ.vibrato-type",
+      "name": "Vibrato type",
+      "section": "Organ",
+      "addressing": "nrpn",
+      "nrpnMsb": 2,
+      "nrpnLsb": 19,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar",
+      "options": [
+        {
+          "value": 11,
+          "label": "V1"
+        },
+        {
+          "value": 32,
+          "label": "C1"
+        },
+        {
+          "value": 53,
+          "label": "V2"
+        },
+        {
+          "value": 75,
+          "label": "C2"
+        },
+        {
+          "value": 96,
+          "label": "V3"
+        },
+        {
+          "value": 117,
+          "label": "C3"
+        }
+      ]
+    },
+    {
+      "id": "piano.a-level",
+      "name": "A level",
+      "section": "Piano",
+      "addressing": "cc",
+      "cc": 34,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "piano.acoustics",
+      "name": "Acoustics",
+      "section": "Piano",
+      "addressing": "nrpn",
+      "nrpnMsb": 2,
+      "nrpnLsb": 44,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar",
+      "hint": "string resonance / acoustic ambience amount"
+    },
+    {
+      "id": "piano.b-level",
+      "name": "B level",
+      "section": "Piano",
+      "addressing": "cc",
+      "cc": 63,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "piano.dynamic-compression",
+      "name": "Dynamic compression",
+      "section": "Piano",
+      "addressing": "nrpn",
+      "nrpnMsb": 2,
+      "nrpnLsb": 42,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar",
+      "hint": "dynamic range compression of the piano"
+    },
+    {
+      "id": "piano.keyboard-touch",
+      "name": "Keyboard touch",
+      "section": "Piano",
+      "addressing": "nrpn",
+      "nrpnMsb": 2,
+      "nrpnLsb": 43,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "piano.layers-enable-scene-i",
+      "name": "Layers enable scene I",
+      "section": "Piano",
+      "addressing": "cc",
+      "cc": 72,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "piano.layers-enable-scene-ii",
+      "name": "Layers enable scene II",
+      "section": "Piano",
+      "addressing": "cc",
+      "cc": 88,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "piano.layers-focus-scene-i",
+      "name": "Layers focus scene I",
+      "section": "Piano",
+      "addressing": "cc",
+      "cc": 109,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "piano.layers-focus-scene-ii",
+      "name": "Layers focus scene II",
+      "section": "Piano",
+      "addressing": "cc",
+      "cc": 112,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "piano.model",
+      "name": "Model",
+      "section": "Piano",
+      "addressing": "nrpn",
+      "nrpnMsb": 2,
+      "nrpnLsb": 33,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "piano.octave-shift",
+      "name": "Octave shift",
+      "section": "Piano",
+      "addressing": "cc",
+      "cc": 35,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "piano.section-enable-scene-i",
+      "name": "Section enable scene I",
+      "section": "Piano",
+      "addressing": "cc",
+      "cc": 33,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "piano.section-enable-scene-ii",
+      "name": "Section enable scene II",
+      "section": "Piano",
+      "addressing": "cc",
+      "cc": 3,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "piano.timbre",
+      "name": "Timbre",
+      "section": "Piano",
+      "addressing": "nrpn",
+      "nrpnMsb": 2,
+      "nrpnLsb": 41,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar",
+      "hint": "piano timbre/brightness variation"
+    },
+    {
+      "id": "piano.type",
+      "name": "Type",
+      "section": "Piano",
+      "addressing": "nrpn",
+      "nrpnMsb": 2,
+      "nrpnLsb": 32,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar",
+      "options": [
+        {
+          "value": 11,
+          "label": "Grand"
+        },
+        {
+          "value": 32,
+          "label": "Upright"
+        },
+        {
+          "value": 53,
+          "label": "Electric Piano"
+        },
+        {
+          "value": 75,
+          "label": "Clav / Harpsichord"
+        },
+        {
+          "value": 96,
+          "label": "Digital"
+        },
+        {
+          "value": 117,
+          "label": "Misc"
+        }
+      ],
+      "hint": "piano category (grand, upright, EP, etc.)"
+    },
+    {
+      "id": "piano.unison",
+      "name": "Unison",
+      "section": "Piano",
+      "addressing": "nrpn",
+      "nrpnMsb": 2,
+      "nrpnLsb": 40,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "piano.variation",
+      "name": "Variation",
+      "section": "Piano",
+      "addressing": "nrpn",
+      "nrpnMsb": 2,
+      "nrpnLsb": 34,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "reverb.amount",
+      "name": "Amount",
+      "section": "Reverb",
+      "addressing": "cc",
+      "cc": 113,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar",
+      "hint": "reverb wet/dry mix"
+    },
+    {
+      "id": "reverb.bright",
+      "name": "Bright",
+      "section": "Reverb",
+      "addressing": "nrpn",
+      "nrpnMsb": 2,
+      "nrpnLsb": 106,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "reverb.enable",
+      "name": "Enable",
+      "section": "Reverb",
+      "addressing": "nrpn",
+      "nrpnMsb": 2,
+      "nrpnLsb": 104,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "reverb.global",
+      "name": "Global",
+      "section": "Reverb",
+      "addressing": "cc",
+      "cc": 30,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "reverb.type",
+      "name": "Type",
+      "section": "Reverb",
+      "addressing": "nrpn",
+      "nrpnMsb": 2,
+      "nrpnLsb": 105,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar",
+      "hint": "reverb size/character"
+    },
+    {
+      "id": "rotary.drive",
+      "name": "Drive",
+      "section": "Rotary",
+      "addressing": "cc",
+      "cc": 110,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "rotary.speed",
+      "name": "Speed",
+      "section": "Rotary",
+      "addressing": "cc",
+      "cc": 108,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar",
+      "hint": "rotary speaker fast/slow"
+    },
+    {
+      "id": "synth-amplifier-envelope.attack",
+      "name": "Attack",
+      "section": "Synth Amplifier Envelope",
+      "addressing": "cc",
+      "cc": 68,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar",
+      "hint": "amp attack — how fast the note speaks (0 = instant, high = slow swell)"
+    },
+    {
+      "id": "synth-amplifier-envelope.decay",
+      "name": "Decay",
+      "section": "Synth Amplifier Envelope",
+      "addressing": "cc",
+      "cc": 69,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar",
+      "hint": "amp decay — fall to sustain level after attack"
+    },
+    {
+      "id": "synth-amplifier-envelope.release",
+      "name": "Release",
+      "section": "Synth Amplifier Envelope",
+      "addressing": "cc",
+      "cc": 71,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar",
+      "hint": "amp release — how long the note rings out after key-up"
+    },
+    {
+      "id": "synth-amplifier-envelope.velocity",
+      "name": "Velocity",
+      "section": "Synth Amplifier Envelope",
+      "addressing": "nrpn",
+      "nrpnMsb": 3,
+      "nrpnLsb": 56,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "synth-arpeggiator.direction",
+      "name": "Direction",
+      "section": "Synth Arpeggiator",
+      "addressing": "nrpn",
+      "nrpnMsb": 3,
+      "nrpnLsb": 74,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar",
+      "options": [
+        {
+          "value": 16,
+          "label": "Up"
+        },
+        {
+          "value": 48,
+          "label": "Down"
+        },
+        {
+          "value": 80,
+          "label": "Up/Down"
+        },
+        {
+          "value": 112,
+          "label": "Random"
+        }
+      ]
+    },
+    {
+      "id": "synth-arpeggiator.mode",
+      "name": "Mode",
+      "section": "Synth Arpeggiator",
+      "addressing": "nrpn",
+      "nrpnMsb": 3,
+      "nrpnLsb": 72,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar",
+      "options": [
+        {
+          "value": 21,
+          "label": "Arp"
+        },
+        {
+          "value": 64,
+          "label": "Poly"
+        },
+        {
+          "value": 107,
+          "label": "Gate"
+        }
+      ]
+    },
+    {
+      "id": "synth-arpeggiator.pattern-on",
+      "name": "Pattern on",
+      "section": "Synth Arpeggiator",
+      "addressing": "nrpn",
+      "nrpnMsb": 3,
+      "nrpnLsb": 73,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "synth-arpeggiator.range",
+      "name": "Range",
+      "section": "Synth Arpeggiator",
+      "addressing": "cc",
+      "cc": 76,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "synth-arpeggiator.rate",
+      "name": "Rate",
+      "section": "Synth Arpeggiator",
+      "addressing": "cc",
+      "cc": 74,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "synth-arpeggiator.run",
+      "name": "Run",
+      "section": "Synth Arpeggiator",
+      "addressing": "cc",
+      "cc": 77,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "synth-arpeggiator.zigzag",
+      "name": "Zigzag",
+      "section": "Synth Arpeggiator",
+      "addressing": "nrpn",
+      "nrpnMsb": 3,
+      "nrpnLsb": 75,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "synth-filter-envelope.amount",
+      "name": "Amount",
+      "section": "Synth Filter Envelope",
+      "addressing": "cc",
+      "cc": 73,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar",
+      "hint": "how much the envelope modulates the cutoff"
+    },
+    {
+      "id": "synth-filter-envelope.attack",
+      "name": "Attack",
+      "section": "Synth Filter Envelope",
+      "addressing": "cc",
+      "cc": 49,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar",
+      "hint": "filter envelope attack — how fast the filter opens"
+    },
+    {
+      "id": "synth-filter-envelope.decay",
+      "name": "Decay",
+      "section": "Synth Filter Envelope",
+      "addressing": "cc",
+      "cc": 50,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar",
+      "hint": "filter envelope decay — fall to sustain after the attack peak"
+    },
+    {
+      "id": "synth-filter-envelope.release",
+      "name": "Release",
+      "section": "Synth Filter Envelope",
+      "addressing": "cc",
+      "cc": 51,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar",
+      "hint": "filter envelope release — how long the filter stays open after release"
+    },
+    {
+      "id": "synth-filter-envelope.velocity",
+      "name": "Velocity",
+      "section": "Synth Filter Envelope",
+      "addressing": "nrpn",
+      "nrpnMsb": 3,
+      "nrpnLsb": 64,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "synth-filter.drive",
+      "name": "Drive",
+      "section": "Synth Filter",
+      "addressing": "nrpn",
+      "nrpnMsb": 3,
+      "nrpnLsb": 49,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar",
+      "options": [
+        {
+          "value": 16,
+          "label": "Off"
+        },
+        {
+          "value": 48,
+          "label": "Low"
+        },
+        {
+          "value": 80,
+          "label": "Mid"
+        },
+        {
+          "value": 112,
+          "label": "High"
+        }
+      ],
+      "hint": "filter drive/overdrive — adds dirt and harmonic saturation"
+    },
+    {
+      "id": "synth-filter.frequency",
+      "name": "Frequency",
+      "section": "Synth Filter",
+      "addressing": "cc",
+      "cc": 59,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar",
+      "hint": "filter cutoff — brightness/openness; low = dark/muffled, high = bright/open"
+    },
+    {
+      "id": "synth-filter.group",
+      "name": "Group",
+      "section": "Synth Filter",
+      "addressing": "cc",
+      "cc": 25,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "synth-filter.keyboard-track",
+      "name": "Keyboard track",
+      "section": "Synth Filter",
+      "addressing": "nrpn",
+      "nrpnMsb": 3,
+      "nrpnLsb": 50,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar",
+      "options": [
+        {
+          "value": 16,
+          "label": "Off"
+        },
+        {
+          "value": 48,
+          "label": "1/3"
+        },
+        {
+          "value": 80,
+          "label": "2/3"
+        },
+        {
+          "value": 112,
+          "label": "Full"
+        }
+      ],
+      "hint": "how much cutoff follows the note pitch up the keyboard"
+    },
+    {
+      "id": "synth-filter.resonance",
+      "name": "Resonance",
+      "section": "Synth Filter",
+      "addressing": "cc",
+      "cc": 60,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar",
+      "hint": "filter resonance/emphasis at the cutoff — adds bite/whistle as it rises"
+    },
+    {
+      "id": "synth-filter.type",
+      "name": "Type",
+      "section": "Synth Filter",
+      "addressing": "nrpn",
+      "nrpnMsb": 3,
+      "nrpnLsb": 51,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar",
+      "options": [
+        {
+          "value": 11,
+          "label": "LP 12"
+        },
+        {
+          "value": 32,
+          "label": "LP 24"
+        },
+        {
+          "value": 53,
+          "label": "LP M"
+        },
+        {
+          "value": 75,
+          "label": "LP+HP"
+        },
+        {
+          "value": 96,
+          "label": "BP"
+        },
+        {
+          "value": 117,
+          "label": "HP"
+        }
+      ],
+      "hint": "filter type/slope selection"
+    },
+    {
+      "id": "synth-lfo.amount",
+      "name": "Amount",
+      "section": "Synth LFO",
+      "addressing": "cc",
+      "cc": 54,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "synth-lfo.destination",
+      "name": "Destination",
+      "section": "Synth LFO",
+      "addressing": "nrpn",
+      "nrpnMsb": 3,
+      "nrpnLsb": 81,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar",
+      "options": [
+        {
+          "value": 16,
+          "label": "Off"
+        },
+        {
+          "value": 48,
+          "label": "Osc Ctrl"
+        },
+        {
+          "value": 80,
+          "label": "Pitch"
+        },
+        {
+          "value": 112,
+          "label": "Filter"
+        }
+      ],
+      "hint": "what the LFO modulates"
+    },
+    {
+      "id": "synth-lfo.rate",
+      "name": "Rate",
+      "section": "Synth LFO",
+      "addressing": "cc",
+      "cc": 79,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar",
+      "hint": "LFO speed"
+    },
+    {
+      "id": "synth-lfo.waveform",
+      "name": "Waveform",
+      "section": "Synth LFO",
+      "addressing": "nrpn",
+      "nrpnMsb": 3,
+      "nrpnLsb": 80,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar",
+      "options": [
+        {
+          "value": 13,
+          "label": "Triangle"
+        },
+        {
+          "value": 38,
+          "label": "Sawtooth 1"
+        },
+        {
+          "value": 64,
+          "label": "Sawtooth 2"
+        },
+        {
+          "value": 90,
+          "label": "Square"
+        },
+        {
+          "value": 115,
+          "label": "Sample & Hold"
+        }
+      ],
+      "hint": "LFO shape"
+    },
+    {
+      "id": "synth-oscillator.category",
+      "name": "Oscillator Category",
+      "section": "Synth Oscillator",
+      "addressing": "nrpn",
+      "nrpnMsb": 3,
+      "nrpnLsb": 2,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar",
+      "options": [
+        {
+          "value": 8,
+          "label": "Pure"
+        },
+        {
+          "value": 24,
+          "label": "Sub Osc"
+        },
+        {
+          "value": 40,
+          "label": "Sync"
+        },
+        {
+          "value": 56,
+          "label": "Shape"
+        },
+        {
+          "value": 72,
+          "label": "Shape Sine"
+        },
+        {
+          "value": 88,
+          "label": "Multi"
+        },
+        {
+          "value": 104,
+          "label": "Super"
+        },
+        {
+          "value": 120,
+          "label": "Misc"
+        }
+      ],
+      "hint": "synth oscillator waveform category (NRPN 3/2; the manual's mislabeled \"Waveform\"). The `options` here are for the Analog type; for FM-H/FM-I/Wave types use the category values in the schema's oscillatorWaveforms catalog. Analog/Misc holds the noises."
+    },
+    {
+      "id": "synth-oscillator.control",
+      "name": "Control",
+      "section": "Synth Oscillator",
+      "addressing": "cc",
+      "cc": 56,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "synth-oscillator.envelope-attack",
+      "name": "Envelope attack",
+      "section": "Synth Oscillator",
+      "addressing": "cc",
+      "cc": 52,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "synth-oscillator.envelope-decay",
+      "name": "Envelope decay",
+      "section": "Synth Oscillator",
+      "addressing": "cc",
+      "cc": 53,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "synth-oscillator.envelope-release",
+      "name": "Envelope release",
+      "section": "Synth Oscillator",
+      "addressing": "cc",
+      "cc": 57,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "synth-oscillator.envelope-to-pitch",
+      "name": "Envelope to pitch",
+      "section": "Synth Oscillator",
+      "addressing": "nrpn",
+      "nrpnMsb": 3,
+      "nrpnLsb": 33,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar",
+      "hint": "how much the modulation envelope sweeps pitch"
+    },
+    {
+      "id": "synth-oscillator.envelope-velocity",
+      "name": "Envelope velocity",
+      "section": "Synth Oscillator",
+      "addressing": "nrpn",
+      "nrpnMsb": 3,
+      "nrpnLsb": 32,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "synth-oscillator.pitch-coarse",
+      "name": "Pitch coarse",
+      "section": "Synth Oscillator",
+      "addressing": "cc",
+      "cc": 55,
+      "min": 0,
+      "max": 127,
+      "orientation": "bipolar",
+      "center": 64,
+      "hint": "oscillator pitch in semitones — bipolar, 64 = no transpose"
+    },
+    {
+      "id": "synth-oscillator.pitch-fine",
+      "name": "Pitch fine",
+      "section": "Synth Oscillator",
+      "addressing": "cc",
+      "cc": 47,
+      "min": 0,
+      "max": 127,
+      "orientation": "bipolar",
+      "center": 64,
+      "hint": "oscillator fine tune/detune — bipolar, 64 = in tune"
+    },
+    {
+      "id": "synth-oscillator.type",
+      "name": "Oscillator Type",
+      "section": "Synth Oscillator",
+      "addressing": "nrpn",
+      "nrpnMsb": 3,
+      "nrpnLsb": 1,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar",
+      "options": [
+        {
+          "value": 16,
+          "label": "Analog"
+        },
+        {
+          "value": 48,
+          "label": "FM-H"
+        },
+        {
+          "value": 80,
+          "label": "FM-I"
+        },
+        {
+          "value": 112,
+          "label": "Wave"
+        }
+      ],
+      "hint": "synth oscillator type (NRPN 3/1, undocumented). Set this first, then category + wave."
+    },
+    {
+      "id": "synth-oscillator.wave",
+      "name": "Oscillator Wave",
+      "section": "Synth Oscillator",
+      "addressing": "nrpn",
+      "nrpnMsb": 3,
+      "nrpnLsb": 3,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar",
+      "hint": "waveform within the current oscillator category (NRPN 3/3) — a LITERAL 0-based index, not a 0-127 range (out-of-range is ignored). See the schema's oscillatorWaveforms for the full Analog catalog (category -> ordered wave names; index = position). E.g. wind/SFX: type=Analog, category=Misc, wave=1 (Red Noise)."
+    },
+    {
+      "id": "synth-vibrato.amount",
+      "name": "Amount",
+      "section": "Synth Vibrato",
+      "addressing": "cc",
+      "cc": 45,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "synth-vibrato.delay-time",
+      "name": "Delay time",
+      "section": "Synth Vibrato",
+      "addressing": "nrpn",
+      "nrpnMsb": 3,
+      "nrpnLsb": 20,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "synth-vibrato.mode",
+      "name": "Mode",
+      "section": "Synth Vibrato",
+      "addressing": "nrpn",
+      "nrpnMsb": 3,
+      "nrpnLsb": 19,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar",
+      "options": [
+        {
+          "value": 11,
+          "label": "Off"
+        },
+        {
+          "value": 32,
+          "label": "On"
+        },
+        {
+          "value": 53,
+          "label": "Delay"
+        },
+        {
+          "value": 75,
+          "label": "Wheel"
+        },
+        {
+          "value": 96,
+          "label": "Aftertouch"
+        },
+        {
+          "value": 117,
+          "label": "Pedal"
+        }
+      ],
+      "hint": "vibrato mode"
+    },
+    {
+      "id": "synth-vibrato.pedal",
+      "name": "Pedal",
+      "section": "Synth Vibrato",
+      "addressing": "cc",
+      "cc": 15,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "synth-vibrato.rate",
+      "name": "Rate",
+      "section": "Synth Vibrato",
+      "addressing": "cc",
+      "cc": 46,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "synth.a-level",
+      "name": "A level",
+      "section": "Synth",
+      "addressing": "cc",
+      "cc": 43,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "synth.a-pan",
+      "name": "A pan",
+      "section": "Synth",
+      "addressing": "cc",
+      "cc": 40,
+      "min": 0,
+      "max": 127,
+      "orientation": "bipolar",
+      "center": 64,
+      "hint": "pan of synth layer A — bipolar, 64 = center"
+    },
+    {
+      "id": "synth.b-level",
+      "name": "B level",
+      "section": "Synth",
+      "addressing": "cc",
+      "cc": 37,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "synth.b-pan",
+      "name": "B pan",
+      "section": "Synth",
+      "addressing": "cc",
+      "cc": 41,
+      "min": 0,
+      "max": 127,
+      "orientation": "bipolar",
+      "center": 64,
+      "hint": "pan of synth layer B — bipolar, 64 = center"
+    },
+    {
+      "id": "synth.c-level",
+      "name": "C level",
+      "section": "Synth",
+      "addressing": "cc",
+      "cc": 39,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "synth.c-pan",
+      "name": "C pan",
+      "section": "Synth",
+      "addressing": "cc",
+      "cc": 36,
+      "min": 0,
+      "max": 127,
+      "orientation": "bipolar",
+      "center": 64,
+      "hint": "pan of synth layer C — bipolar, 64 = center"
+    },
+    {
+      "id": "synth.glide-rate",
+      "name": "Glide rate",
+      "section": "Synth",
+      "addressing": "cc",
+      "cc": 48,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "synth.layers-enable-scene-i",
+      "name": "Layers enable scene I",
+      "section": "Synth",
+      "addressing": "cc",
+      "cc": 61,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "synth.layers-enable-scene-ii",
+      "name": "Layers enable scene II",
+      "section": "Synth",
+      "addressing": "cc",
+      "cc": 75,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "synth.layers-focus-scene-i",
+      "name": "Layers focus scene I",
+      "section": "Synth",
+      "addressing": "cc",
+      "cc": 115,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "synth.layers-focus-scene-ii",
+      "name": "Layers focus scene II",
+      "section": "Synth",
+      "addressing": "cc",
+      "cc": 119,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "synth.octave-shift",
+      "name": "Octave shift",
+      "section": "Synth",
+      "addressing": "cc",
+      "cc": 44,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "synth.sample-bright",
+      "name": "Sample bright",
+      "section": "Synth",
+      "addressing": "nrpn",
+      "nrpnMsb": 3,
+      "nrpnLsb": 8,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar",
+      "hint": "sample brightness — high-frequency content of the sample"
+    },
+    {
+      "id": "synth.sample-category-and-sample",
+      "name": "Sample category and sample",
+      "section": "Synth",
+      "addressing": "nrpn14",
+      "nrpnMsb": 3,
+      "nrpnLsb": 4,
+      "min": 0,
+      "max": 16383,
+      "orientation": "unipolar",
+      "hint": "14-bit: MSB selects sample category, LSB selects sample within it",
+      "notes": "Uses 14-bit value. Data Entry MSB selects category and LSB selects sample."
+    },
+    {
+      "id": "synth.section-enable-scene-i",
+      "name": "Section enable scene I",
+      "section": "Synth",
+      "addressing": "cc",
+      "cc": 42,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "synth.section-enable-scene-ii",
+      "name": "Section enable scene II",
+      "section": "Synth",
+      "addressing": "cc",
+      "cc": 5,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar"
+    },
+    {
+      "id": "synth.unison",
+      "name": "Unison",
+      "section": "Synth",
+      "addressing": "nrpn",
+      "nrpnMsb": 3,
+      "nrpnLsb": 18,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar",
+      "options": [
+        {
+          "value": 16,
+          "label": "Off"
+        },
+        {
+          "value": 48,
+          "label": "1"
+        },
+        {
+          "value": 80,
+          "label": "2"
+        },
+        {
+          "value": 112,
+          "label": "3"
+        }
+      ]
+    },
+    {
+      "id": "synth.voice-mode",
+      "name": "Voice mode",
+      "section": "Synth",
+      "addressing": "nrpn",
+      "nrpnMsb": 3,
+      "nrpnLsb": 16,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar",
+      "options": [
+        {
+          "value": 21,
+          "label": "Poly"
+        },
+        {
+          "value": 64,
+          "label": "Mono"
+        },
+        {
+          "value": 107,
+          "label": "Legato"
+        }
+      ]
+    },
+    {
+      "id": "synth.voice-priority",
+      "name": "Voice priority",
+      "section": "Synth",
+      "addressing": "nrpn",
+      "nrpnMsb": 3,
+      "nrpnLsb": 17,
+      "min": 0,
+      "max": 127,
+      "orientation": "unipolar",
+      "options": [
+        {
+          "value": 21,
+          "label": "Normal"
+        },
+        {
+          "value": 64,
+          "label": "Lo"
+        },
+        {
+          "value": 107,
+          "label": "Hi"
+        }
+      ]
+    }
+  ],
+  "oscillatorWaveforms": [
+    {
+      "type": "Analog",
+      "value": 16,
+      "categories": [
+        {
+          "category": "Pure",
+          "value": 8,
+          "waves": [
+            "Sine",
+            "Triangle",
+            "Saw",
+            "Square",
+            "Pulse 33",
+            "Pulse 10",
+            "White Noise"
+          ]
+        },
+        {
+          "category": "Sub Osc",
+          "value": 24,
+          "waves": [
+            "Square Sub Saw",
+            "Pulse Sub Saw",
+            "Sine Sub Saw"
+          ]
+        },
+        {
+          "category": "Sync",
+          "value": 40,
+          "waves": [
+            "Sine",
+            "Triangle",
+            "Saw",
+            "Square",
+            "Pulse 33",
+            "Pulse 10",
+            "Chop Saw",
+            "Chop Saw 2",
+            "Chop Square"
+          ]
+        },
+        {
+          "category": "Shape",
+          "value": 56,
+          "waves": [
+            "Triangle",
+            "Saw",
+            "Square",
+            "Half Sine",
+            "Parabolic"
+          ]
+        },
+        {
+          "category": "Shape Sine",
+          "value": 72,
+          "waves": [
+            "Saw",
+            "Square",
+            "Pulse",
+            "Squeeze",
+            "Fold",
+            "ESaw",
+            "ESquare"
+          ]
+        },
+        {
+          "category": "Multi",
+          "value": 88,
+          "waves": [
+            "Multi Saw",
+            "Multi Saw 8ve",
+            "Multi Saw 5th",
+            "Multi Saw 5th+",
+            "Multi Saw 8ve 8ve+",
+            "Multi Saw 8ve 5th+"
+          ]
+        },
+        {
+          "category": "Super",
+          "value": 104,
+          "waves": [
+            "Super Saw",
+            "Super Square",
+            "Super Organ",
+            "Super Bright",
+            "Super Square Bright"
+          ]
+        },
+        {
+          "category": "Misc",
+          "value": 120,
+          "waves": [
+            "Pink Noise",
+            "Red Noise",
+            "Bell"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "FM-H",
+      "value": 48,
+      "categories": [
+        {
+          "category": "FM Harmonic A",
+          "value": 8,
+          "waveNote": "wave index 0 = ratio 0.5; index n (1..24) = ratio n. 25 ratios."
+        },
+        {
+          "category": "FM Harmonic B",
+          "value": 24,
+          "waveNote": "wave index 0 = ratio 0.5; index n (1..24) = ratio n. 25 ratios."
+        },
+        {
+          "category": "FM Harmonic C",
+          "value": 40,
+          "waveNote": "wave index 0 = ratio 0.5; index n (1..24) = ratio n. 25 ratios."
+        },
+        {
+          "category": "FM Harmonic D",
+          "value": 56,
+          "waveNote": "wave index 0 = ratio 0.5; index n (1..24) = ratio n. 25 ratios."
+        },
+        {
+          "category": "FM Harmonic E",
+          "value": 72,
+          "waveNote": "wave index 0 = ratio 0.5; index n (1..24) = ratio n. 25 ratios."
+        }
+      ]
+    },
+    {
+      "type": "FM-I",
+      "value": 80,
+      "categories": [
+        {
+          "category": "FM Inharmonic A",
+          "value": 8,
+          "waveNote": "wave index 0..60 = semitone (index - 12); range -12 .. +48 semitones."
+        },
+        {
+          "category": "FM Inharmonic B",
+          "value": 24,
+          "waveNote": "wave index 0..60 = semitone (index - 12); range -12 .. +48 semitones."
+        },
+        {
+          "category": "FM Inharmonic C",
+          "value": 40,
+          "waveNote": "wave index 0..60 = semitone (index - 12); range -12 .. +48 semitones."
+        },
+        {
+          "category": "FM Inharmonic D",
+          "value": 56,
+          "waveNote": "wave index 0..60 = semitone (index - 12); range -12 .. +48 semitones."
+        },
+        {
+          "category": "FM Inharmonic E",
+          "value": 72,
+          "waveNote": "wave index 0..60 = semitone (index - 12); range -12 .. +48 semitones."
+        }
+      ]
+    },
+    {
+      "type": "Wave",
+      "value": 112,
+      "categories": [
+        {
+          "category": "Bells/Tines",
+          "value": 8,
+          "waves": [
+            "Bell",
+            "Bar 1",
+            "Bar 2",
+            "Tines",
+            "Marimba",
+            "Tubular Bells"
+          ]
+        },
+        {
+          "category": "Acoustic",
+          "value": 24,
+          "waves": [
+            "Flute 1",
+            "Flute 2",
+            "Clarinet 1",
+            "Clarinet 2",
+            "Alto Sax",
+            "Tenor Sax"
+          ]
+        },
+        {
+          "category": "Digital",
+          "value": 40,
+          "waves": [
+            "2nd Spectra",
+            "3rd Spectra",
+            "4th Spectra",
+            "5th Spectra",
+            "6th Spectra",
+            "7th Spectra",
+            "8th Spectra",
+            "Saw Random",
+            "Saw Bright",
+            "Saw NoFund",
+            "Square Bright",
+            "Ice 1",
+            "Ice 2",
+            "Triplets"
+          ]
+        },
+        {
+          "category": "Organ",
+          "value": 56,
+          "waves": [
+            "Second",
+            "Third",
+            "Jimmy Smith",
+            "Blues",
+            "Gospel",
+            "Church",
+            "Squabble",
+            "Full Organ",
+            "Full Organ+",
+            "Principal"
+          ]
+        },
+        {
+          "category": "Keys",
+          "value": 72,
+          "waves": [
+            "EPiano 1",
+            "EPiano 2",
+            "EPiano 3",
+            "DX 1",
+            "DX 2",
+            "Full Tines",
+            "AcPiano",
+            "Clavinet 1",
+            "Clavinet 2",
+            "Clavinet 3"
+          ]
+        }
+      ]
+    }
+  ]
+}
