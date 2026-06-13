@@ -145,10 +145,17 @@ jobs:
 
           if [ "${status:-}" != "Accepted" ]; then
             # A real Invalid would have exited above; an unfinished "In Progress"
-            # here means Apple's Notary Service is backlogged. Don't fail the
-            # build — keep the SIGNED (un-stapled) .pkg and let the user staple
-            # later with installers/macos/notarize-staple.sh once Apple clears.
-            echo "::warning::Apple notarization still '${status:-In Progress}' after 20 min (Apple-side backlog, not a package problem). Uploading the SIGNED but UN-STAPLED .pkg ($sub_id). Re-run later, or staple locally: installers/macos/notarize-staple.sh \"$PKG\""
+            # here means Apple's Notary Service is backlogged (Apple-side, not a
+            # package problem).
+            if [[ "$GITHUB_REF" == refs/tags/* ]]; then
+              # Release build: do NOT publish an un-stapled installer. Fail so the
+              # release waits; re-tag (or re-run) once Apple's queue recovers.
+              echo "::error::Release build but notarization is still '${status:-In Progress}' after 20 min (Apple backlog). Refusing to publish an un-stapled macOS installer. Re-tag once Apple recovers, or staple locally with installers/macos/notarize-staple.sh."
+              exit 1
+            fi
+            # Test build (workflow_dispatch): keep the SIGNED (un-stapled) .pkg so
+            # the install/config flow is still testable; staple later if wanted.
+            echo "::warning::Apple notarization still '${status:-In Progress}' after 20 min (Apple-side backlog). Test build — keeping the SIGNED but UN-STAPLED .pkg ($sub_id). Staple later: installers/macos/notarize-staple.sh \"$PKG\""
             echo "NOTARIZED=false" >> "$GITHUB_ENV"
             exit 0
           fi
