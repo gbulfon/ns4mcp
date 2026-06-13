@@ -92,6 +92,34 @@ also requires accepting the latest Apple Developer agreements.
 > signing step into the `windows` job before the upload and sign both
 > `runtime\node.exe` and the final `-setup.exe`.
 
+### When Apple notarization is slow (backlog)
+
+Apple's Notary Service occasionally backlogs: submissions sit at `In Progress` for
+hours (sometimes the whole day) even though signing/auth are fine. A *bad* package
+fails fast as `Invalid` with a log — a long `In Progress` is **Apple-side**, not us.
+
+The macOS job waits up to 20 min, then — rather than failing — uploads the **signed
+but un-stapled** `.pkg` with a warning and `NOTARIZED=false`. So during a backlog you
+still get installers to test the install/config flow; they just trigger Gatekeeper
+until stapled.
+
+To finish them once Apple recovers (no CI re-run needed), staple locally:
+
+```bash
+# one-time: store an app-specific password
+xcrun notarytool store-credentials ns4-notary \
+  --apple-id gb@gabrielebulfon.com --team-id 62K8Y7Q23Q --password xxxx-xxxx-xxxx-xxxx
+
+# download the .pkg from the workflow run, then:
+installers/macos/notarize-staple.sh NS4MCP-<ver>-macos-arm64.pkg ns4-notary
+```
+
+Check a stuck submission without re-submitting:
+`xcrun notarytool history --keychain-profile ns4-notary`.
+
+**Before publishing a real release**, confirm the macOS jobs logged `NOTARIZED=true`
+(or staple locally and re-upload), so users don't get a Gatekeeper warning.
+
 ## Cutting a release
 
 ```bash

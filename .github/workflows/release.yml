@@ -126,9 +126,10 @@ jobs:
           echo "Submission id: $sub_id"
 
           # Poll with our own loop so transient network errors just retry.
-          # Up to 60 * 30s = 30 min budget.
+          # Up to 40 * 30s = 20 min budget (the happy path notarizes in minutes;
+          # a longer hang means Apple's notary queue is backlogged, see below).
           status="In Progress"
-          for i in $(seq 1 60); do
+          for i in $(seq 1 40); do
             info=$(xcrun notarytool info "$sub_id" "${auth[@]}" --output-format json 2>/dev/null || true)
             status=$(printf '%s' "$info" | jq -r '.status // empty' 2>/dev/null || true)
             echo "  [poll $i] status: ${status:-<network blip, retrying>}"
@@ -143,9 +144,13 @@ jobs:
           done
 
           if [ "${status:-}" != "Accepted" ]; then
-            echo "::error::Notarization did not reach Accepted within the time budget (last: ${status:-unknown})."
-            xcrun notarytool log "$sub_id" "${auth[@]}" || true
-            exit 1
+            # A real Invalid would have exited above; an unfinished "In Progress"
+            # here means Apple's Notary Service is backlogged. Don't fail the
+            # build — keep the SIGNED (un-stapled) .pkg and let the user staple
+            # later with installers/macos/notarize-staple.sh once Apple clears.
+            echo "::warning::Apple notarization still '${status:-In Progress}' after 20 min (Apple-side backlog, not a package problem). Uploading the SIGNED but UN-STAPLED .pkg ($sub_id). Re-run later, or staple locally: installers/macos/notarize-staple.sh \"$PKG\""
+            echo "NOTARIZED=false" >> "$GITHUB_ENV"
+            exit 0
           fi
 
           # Staple the ticket (small retry — this also touches the network).
@@ -153,6 +158,7 @@ jobs:
             xcrun stapler staple "$PKG" && break || { echo "  staple attempt $i failed, retrying…"; sleep 15; }
           done
           xcrun stapler validate "$PKG"
+          echo "NOTARIZED=true" >> "$GITHUB_ENV"
 
       - name: Warn if unsigned
         if: env.MACOS_CERT_P12 == ''
